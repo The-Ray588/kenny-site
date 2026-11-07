@@ -420,4 +420,81 @@ if (writeForm) {
     toast("Открываю Telegram ✨");
     writeForm.reset();
   });
+}
+
+(function() {
+  const meteorCanvas = document.getElementById("meteors");
+  if (!meteorCanvas) return;
+  const mctx = meteorCanvas.getContext("2d");
+  let mw, mh;
+
+  function mresize() {
+    mw = meteorCanvas.width = window.innerWidth;
+    mh = meteorCanvas.height = window.innerHeight;
   }
+  mresize();
+  window.addEventListener("resize", mresize);
+
+  const meteors = [];
+  const maxMeteors = 3;
+
+  function spawnMeteor() {
+    if (meteors.length >= maxMeteors) return;
+    meteors.push({
+      x: Math.random() * mw,
+      y: -100,
+      vx: 2 + Math.random() * 2,
+      vy: 4 + Math.random() * 3,
+      len: 80 + Math.random() * 80,
+      life: 1,
+      hue: Math.random() < 0.5 ? 330 : 280,
+    });
+  }
+
+  function drawMeteors() {
+    mctx.clearRect(0, 0, mw, mh);
+
+    for (let i = meteors.length - 1; i >= 0; i--) {
+      const m = meteors[i];
+      m.x += m.vx;
+      m.y += m.vy;
+      m.life -= 0.003;
+
+      if (m.y > mh + 100 || m.x > mw + 100 || m.life <= 0) {
+        meteors.splice(i, 1);
+        continue;
+      }
+
+      const dx = m.vx / Math.sqrt(m.vx*m.vx + m.vy*m.vy);
+      const dy = m.vy / Math.sqrt(m.vx*m.vx + m.vy*m.vy);
+
+      const grad = mctx.createLinearGradient(
+        m.x, m.y,
+        m.x - dx * m.len, m.y - dy * m.len
+      );
+      grad.addColorStop(0, `hsla(${m.hue}, 90%, 75%, ${m.life * 0.9})`);
+      grad.addColorStop(1, `hsla(${m.hue}, 90%, 75%, 0)`);
+
+      mctx.strokeStyle = grad;
+      mctx.lineWidth = 2;
+      mctx.beginPath();
+      mctx.moveTo(m.x, m.y);
+      mctx.lineTo(m.x - dx * m.len, m.y - dy * m.len);
+      mctx.stroke();
+
+      mctx.beginPath();
+      mctx.arc(m.x, m.y, 2, 0, Math.PI * 2);
+      mctx.fillStyle = `hsla(${m.hue}, 90%, 85%, ${m.life})`;
+      mctx.shadowBlur = 15;
+      mctx.shadowColor = `hsla(${m.hue}, 90%, 75%, ${m.life})`;
+      mctx.fill();
+      mctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(drawMeteors);
+  }
+  drawMeteors();
+
+  setInterval(spawnMeteor, 2500);
+  setTimeout(spawnMeteor, 500);
+})();
