@@ -19,6 +19,13 @@
 
 <br/><br/>
 
+<img src="https://img.shields.io/badge/version-1.4-f472b6?style=flat-square&labelColor=1a0a24"/>
+<img src="https://img.shields.io/badge/статус-онлайн-a855f7?style=flat-square&labelColor=1a0a24"/>
+<img src="https://img.shields.io/badge/лицензия-MIT-f472b6?style=flat-square&labelColor=1a0a24"/>
+<img src="https://img.shields.io/badge/сделано_с-❤️-a855f7?style=flat-square&labelColor=1a0a24"/>
+
+<br/><br/>
+
 <img src="https://readme-typing-svg.demolab.com?font=Unbounded&weight=600&size=22&duration=3000&pause=1000&color=F472B6&center=true&vCenter=true&width=600&lines=Добро+пожаловать+на+мой+сайт+✨;Актёрское+мастерство+🎭;Блогинг+📱;Музыка+🎵;Психология+🧠" />
 
 </div>
@@ -31,11 +38,25 @@
 
 </div>
 
-> Персональный сайт-визитка **Екатерины** — актрисы, блогера и музыканта.  
-> Тёмный фон с мерцающим созвездием, розово-фиолетовая палитра,  
-> плавные анимации и интерактивные элементы.
+<table align="center">
+<tr>
+<td width="60%">
+
+> Персональный сайт-визитка **Екатерины** — актрисы, блогера и музыканта.
+>
+> Тёмный фон с мерцающим созвездием, розово-фиолетовая палитра,
+> плавные анимации, экран загрузки с частицами и интерактивные элементы.
 >
 > Сайт полностью **адаптивный** — красиво выглядит и на ПК, и на телефоне.
+
+</td>
+<td width="40%" align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=the-ray588&repo=kenny-site&theme=radical&border_color=f472b6&title_color=f472b6&icon_color=a855f7&text_color=ffffff&bg_color=1a0a24" />
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -47,6 +68,13 @@
 
 <table align="center">
 <tr>
+<td align="center" width="33%">
+
+### 🎬
+**Экран загрузки**  
+Частицы, прогресс-бар и проценты
+
+</td>
 <td align="center" width="33%">
 
 ### 🖼️
@@ -61,15 +89,15 @@
 Бейдж «дёргается» от клика со звуком
 
 </td>
-<td align="center" width="33%">
+</tr>
+<tr>
+<td align="center">
 
 ### 🖱️
 **Умный курсор**  
 Увеличивается на кнопках
 
 </td>
-</tr>
-<tr>
 <td align="center">
 
 ### 🌌
@@ -84,6 +112,8 @@
 Звёзды разлетаются + волна
 
 </td>
+</tr>
+<tr>
 <td align="center">
 
 ### ⌨️
@@ -91,8 +121,6 @@
 Биография по буквам с паузами
 
 </td>
-</tr>
-<tr>
 <td align="center">
 
 ### 🧲
@@ -107,6 +135,8 @@
 Включение одним нажатием
 
 </td>
+</tr>
+<tr>
 <td align="center">
 
 ### 🕐
@@ -114,8 +144,6 @@
 Время в углу экрана
 
 </td>
-</tr>
-<tr>
 <td align="center">
 
 ### 💌
@@ -130,11 +158,27 @@
 Плашка с текущим треком
 
 </td>
+</tr>
+<tr>
 <td align="center">
 
 ### 📱
 **Адаптивность**  
 ПК + телефон
+
+</td>
+<td align="center">
+
+### 🌈
+**Градиентные бордеры**  
+Переливаются при hover
+
+</td>
+<td align="center">
+
+### 🎨
+**Иконки соцсетей**  
+SVG вместо текста
 
 </td>
 </tr>
@@ -272,6 +316,8 @@ https://the-ray588.github.io/kenny-site/
 ```
 
 ---
+
+<div align="center">
 
 🙏 Благодарности
 
