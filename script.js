@@ -327,7 +327,7 @@ function boing() {
 avatar.addEventListener("click", boing);
 avatar.addEventListener("touchstart", boing, { passive: true });
 
-document.querySelectorAll(".socials a, .audio-btn, .top-btn, .share-btn").forEach(el => {
+document.querySelectorAll(".socials a, .audio-btn, .top-btn, .share-btn, .dev-btn").forEach(el => {
   el.addEventListener("mousemove", e => {
     const r = el.getBoundingClientRect();
     const x = e.clientX - r.left - r.width / 2;
