@@ -640,3 +640,28 @@ section.visible .card:nth-child(8) { transition-delay: 0.54s; }
 .now-playing {
   position: fixed; bottom: 24px; left: 24px; z-index: 100;
   display: flex; align-items: center; gap: 10px;
+  padding: 10px 18px; border-radius: 14px;
+  background: rgba(13,5,18,0.7);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(244,114,182,0.25);
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 340px;
+  box-shadow: 0 8px 24px rgba(244,114,182,0.15);
+}
+.now-playing b { color: var(--pink); }
+.np-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 12px var(--pink);
+  flex-shrink: 0;
+  animation: npPulse 1.6s ease-in-out infinite;
+}
+@keyframes npPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.4); opacity: 0.6; }
+}
+
+.toast {
+  position: fixed; bottom: 40px; l
