@@ -644,4 +644,17 @@ footer {
 @media (max-width: 768px) {
   body { padding-bottom: 80px; }
   section { padding: 60px 20px; }
-  h1 { font-size: clamp(2rem, 10vw
+  h1 { font-size: clamp(2rem, 10vw, 3rem); text-align: center; }
+  h2 { font-size: 1.3rem; }
+  .hero { gap: 30px; text-align: center; }
+  .avatar { width: 200px; height: 250px; }
+  .thread { height: 60px; }
+  .subtitle { font-size: 0.9rem; text-align: center; }
+  .card { padding: 20px; }
+  .card .name { font-size: 1.05rem; }
+  .card .desc { font-size: 0.9rem; }
+  .socials { flex-direction: column; }
+  .socials a { text-align: center; padding: 16px 20px; justify-content: center; }
+  .write-me { padding: 24px; }
+  .write-form button { align-self: stretch; text-align: center; }
+  .audio-btn, .top-btn, .share-
