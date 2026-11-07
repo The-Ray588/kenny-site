@@ -4,14 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Екатерина — актриса, блогер, музыкант</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<canvas id="constellation"></canvas>
 <div class="bg-grid"></div>
-<div class="particles" id="particles"></div>
 <div class="cursor" id="cursor"></div>
+
 <button class="audio-btn" id="audioBtn">🔇</button>
+<button class="top-btn" id="topBtn" title="Наверх">↑</button>
+<button class="share-btn" id="shareBtn" title="Поделиться">🔗</button>
+
+<div class="clock" id="clock">—:—</div>
 
 <section id="hero">
   <div class="hero">
@@ -56,6 +64,8 @@
 </section>
 
 <footer>© 2026 · сделано с ♥</footer>
+
+<div class="toast" id="toast"></div>
 
 <script src="script.js"></script>
 </body>
