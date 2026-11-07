@@ -246,26 +246,11 @@ python -m http.server 8000
 ```
 
 ---
-
 <div align="center">
 
-🌐 Деплой
+🔗 the-ray588.github.io/kenny-site
 
 </div>
-
-Сайт работает на GitHub Pages:
-
-Шаг Действие
-1 Settings → Pages
-2 Source: Deploy from a branch
-3 Branch: main, папка / (root)
-4 Save
-
-Через минуту сайт доступен по адресу:
-
-```
-https://the-ray588.github.io/kenny-site/
-```
 
 ---
 
