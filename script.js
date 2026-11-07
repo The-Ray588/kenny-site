@@ -1,12 +1,95 @@
+(function() {
+  const loader = document.getElementById("loader");
+  const fill = document.getElementById("loaderFill");
+  const percent = document.getElementById("loaderPercent");
+  const text = document.getElementById("loaderText");
+  const particlesBox = document.getElementById("loaderParticles");
+
+  if (!loader) return;
+
+  if (particlesBox) {
+    for (let i = 0; i < 30; i++) {
+      const p = document.createElement("span");
+      p.className = "loader-particle";
+      p.style.left = Math.random() * 100 + "%";
+      p.style.animationDelay = Math.random() * 3 + "s";
+      p.style.animationDuration = (2 + Math.random() * 3) + "s";
+      if (Math.random() < 0.5) {
+        p.style.background = "var(--purple)";
+        p.style.boxShadow = "0 0 12px var(--purple), 0 0 24px rgba(168,85,247,0.6)";
+      }
+      particlesBox.appendChild(p);
+    }
+  }
+
+  const phrases = ["Загрузка", "Созвездие", "Команда", "Готово"];
+  let progress = 0;
+  let phraseIdx = 0;
+
+  const interval = setInterval(() => {
+    progress += Math.random() * 15 + 5;
+    if (progress > 100) progress = 100;
+
+    fill.style.width = progress + "%";
+    percent.textContent = Math.round(progress) + "%";
+
+    const newIdx = Math.min(Math.floor(progress / 33), phrases.length - 1);
+    if (newIdx !== phraseIdx) {
+      phraseIdx = newIdx;
+      text.textContent = phrases[phraseIdx];
+    }
+
+    if (progress >= 100) {
+      clearInterval(interval);
+      setTimeout(() => {
+        loader.classList.add("hidden");
+        setTimeout(() => loader.remove(), 1000);
+      }, 400);
+    }
+  }, 180);
+})();
+
 const TEAM = [
-  { name: "TheRay", role: "Программист · Художник · 3D-модельер", desc: "Очень дружелюбный, добрый. Помогает мне разрабатывать сайты, рисовать арты, делать модель моего Minecraft-персонажа." },
-  { name: "Csinffy", role: "Монтажёр", desc: "Помогает мне осознать ошибки в монтаже, и сам монтирует в своей программе для монтажа." },
-  { name: "Timerik / Preniks", role: "Продюсер", desc: "Создаёт биты для моего музыкального творчества. Также хорош в монтаже, иногда помогает делать видео под треки с субтитрами." },
-  { name: "Layz", role: "Интромэйкер", desc: "Делает интро для процесса моих видеороликов." },
-  { name: "Liga", role: "Дизайнер", desc: "Создаёт превью, скины, оформления." },
-  { name: "Miray", role: "Главный менеджер · Дизайнер · Интромэйкер", desc: "Создаёт превью, скины, оформления, интро. Передаёт мне информацию, которую люди желают уточнить у меня." },
-  { name: "Flady", role: "Актриса", desc: "Родная актриса, с которой снимаем различные коллаборации." },
-  { name: "Apathyfamee", role: "Защитник профиля и YouTube-канала", desc: "Отвечает за незаконные дела злоумышленников и всегда готов дать им отпор." },
+  {
+    name: "TheRay",
+    role: "Программист · Художник · 3D-модельер",
+    desc: "Очень дружелюбный и добрый. Помогает разрабатывать сайты, рисовать арты и создавать 3D-модели моего Minecraft-персонажа."
+  },
+  {
+    name: "Csinffy",
+    role: "Монтажёр",
+    desc: "Помогает находить и исправлять ошибки в монтаже, а также сам монтирует видео в своей программе."
+  },
+  {
+    name: "Timerik / Preniks",
+    role: "Продюсер",
+    desc: "Создаёт биты для моего музыкального творчества. Также отлично разбирается в монтаже и иногда помогает делать видео под треки с субтитрами."
+  },
+  {
+    name: "Layz",
+    role: "Интромэйкер",
+    desc: "Делает стильные интро для моих видеороликов."
+  },
+  {
+    name: "Liga",
+    role: "Дизайнер",
+    desc: "Создаёт превью, скины и оформления для контента."
+  },
+  {
+    name: "Miray",
+    role: "Главный менеджер · Дизайнер · Интромэйкер",
+    desc: "Создаёт превью, скины, оформления и интро. Передаёт мне информацию, которую люди хотят уточнить."
+  },
+  {
+    name: "Flady",
+    role: "Актриса",
+    desc: "Родная актриса, с которой мы снимаем различные коллаборации."
+  },
+  {
+    name: "Apathyfamee",
+    role: "Защитник профиля и YouTube-канала",
+    desc: "Отвечает за безопасность и защиту от незаконных действий злоумышленников. Всегда готов дать отпор."
+  },
 ];
 
 const SOCIALS = [
@@ -112,12 +195,12 @@ function explodeAt(px, py) {
 }
 
 document.addEventListener("click", e => {
-  if (e.target.closest("a, button, .avatar, input, textarea")) return;
+  if (e.target.closest("a, button, .avatar, input, textarea, .loader")) return;
   explodeAt(e.clientX, e.clientY);
 });
 
 document.addEventListener("touchstart", e => {
-  if (e.target.closest("a, button, .avatar, input, textarea")) return;
+  if (e.target.closest("a, button, .avatar, input, textarea, .loader")) return;
   const t = e.touches[0];
   explodeAt(t.clientX, t.clientY);
 }, { passive: true });
@@ -337,4 +420,4 @@ if (writeForm) {
     toast("Открываю Telegram ✨");
     writeForm.reset();
   });
-      }
+  }
