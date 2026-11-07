@@ -57,16 +57,10 @@ body {
   animation: loaderParticleFloat linear infinite;
 }
 @keyframes loaderParticleFloat {
-  0% {
-    transform: translateY(100vh) translateX(0) scale(0);
-    opacity: 0;
-  }
+  0% { transform: translateY(100vh) translateX(0) scale(0); opacity: 0; }
   10% { opacity: 1; transform: translateY(90vh) translateX(10px) scale(1); }
   90% { opacity: 1; }
-  100% {
-    transform: translateY(-10vh) translateX(-20px) scale(0.5);
-    opacity: 0;
-  }
+  100% { transform: translateY(-10vh) translateX(-20px) scale(0.5); opacity: 0; }
 }
 
 @keyframes loaderShimmer {
@@ -666,4 +660,4 @@ section.visible .card:nth-child(8) { transition-delay: 0.54s; }
   animation: npPulse 1.6s ease-in-out infinite;
 }
 @keyframes npPulse {
-  0%, 100% { transform: s
+  0%, 100% { transform: scale(1); opacity: 1;
