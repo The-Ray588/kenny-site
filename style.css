@@ -455,7 +455,7 @@ section.visible .card:nth-child(8) { transition-delay: 0.54s; }
   position: relative; z-index: 1;
 }
 
-.socials { display: flex; flex-wrap: wrap; gap: 20px; }
+.socials { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px; }
 .socials a {
   padding: 18px 28px; border-radius: 16px; text-decoration: none;
   color: #fff; font-family: var(--font-head); font-weight: 400;
@@ -482,10 +482,17 @@ section.visible .card:nth-child(8) { transition-delay: 0.54s; }
 .socials a:nth-child(1) { animation-delay: 0s; }
 .socials a:nth-child(2) { animation-delay: 0.5s; }
 .socials a:nth-child(3) { animation-delay: 1s; }
+
 .socials a svg {
-  width: 24px; height: 24px;
+  width: 24px !important; 
+  height: 24px !important;
+  max-width: 24px;
+  max-height: 24px;
+  display: block;
+  flex-shrink: 0;
   transition: transform 0.4s var(--ease-spring);
 }
+
 .socials a:hover svg {
   transform: scale(1.2) rotate(-8deg);
 }
@@ -614,7 +621,7 @@ section.visible .card:nth-child(8) { transition-delay: 0.54s; }
 }
 
 .clock {
-  position: fixed; top: 20px; left: 24px; z-index: 100;
+  position: fixed; top: 20px; left: 110px; z-index: 100;
   font-family: var(--font-mono); font-size: 0.85rem;
   color: rgba(244,114,182,0.7);
   padding: 8px 16px; border-radius: 12px;
@@ -659,9 +666,4 @@ section.visible .card:nth-child(8) { transition-delay: 0.54s; }
   animation: npPulse 1.6s ease-in-out infinite;
 }
 @keyframes npPulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50%      { transform: scale(1.4); opacity: 0.6; }
-}
-
-.toast {
-  position: fixed; bottom: 40px; l
+  0%, 100% { transform: s
