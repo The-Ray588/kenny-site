@@ -10,12 +10,12 @@ const TEAM = [
 ];
 
 const SOCIALS = [
-  { name: "Telegram-канал", url: "https://t.me/MsKennya" },
-  { name: "YouTube",        url: "https://www.youtube.com/@MsKennya_MCPE" },
-  { name: "ВКонтакте",      url: "https://vk.ru/mayni_mcpe" },
+  { name: "Telegram", url: "https://t.me/MsKennya", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>' },
+  { name: "YouTube", url: "https://www.youtube.com/@MsKennya_MCPE", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>' },
+  { name: "ВКонтакте", url: "https://vk.ru/mayni_mcpe", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.864 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.762-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.491-.085.744-.576.744z"/></svg>' },
 ];
 
-const BIO_FIRST = "Здравствуйте! Меня зовут Екатерина, и мне 14–15 лет.";
+const BIO_FULL = "Здравствуйте! Меня зовут Екатерина, и мне 14–15 лет. Я увлекаюсь актёрским мастерством, ведением блога, музыкой и психологией.";
 
 const teamGrid = document.getElementById("teamGrid");
 TEAM.forEach(m => {
@@ -29,7 +29,7 @@ TEAM.forEach(m => {
 
 const socials = document.getElementById("socials");
 SOCIALS.forEach(s => {
-  socials.innerHTML += `<a href="${s.url}" target="_blank" rel="noreferrer">${s.name}</a>`;
+  socials.innerHTML += `<a href="${s.url}" target="_blank" rel="noreferrer">${s.icon}<span>${s.name}</span></a>`;
 });
 
 const clockEl = document.getElementById("clock");
@@ -112,12 +112,12 @@ function explodeAt(px, py) {
 }
 
 document.addEventListener("click", e => {
-  if (e.target.closest("a, button, .avatar")) return;
+  if (e.target.closest("a, button, .avatar, input, textarea")) return;
   explodeAt(e.clientX, e.clientY);
 });
 
 document.addEventListener("touchstart", e => {
-  if (e.target.closest("a, button, .avatar")) return;
+  if (e.target.closest("a, button, .avatar, input, textarea")) return;
   const t = e.touches[0];
   explodeAt(t.clientX, t.clientY);
 }, { passive: true });
@@ -192,21 +192,41 @@ document.addEventListener("mousemove", e => {
   cursor.style.top = e.clientY + "px";
 });
 document.addEventListener("mouseover", e => {
-  const interactive = e.target.closest("a, button, .avatar");
+  const interactive = e.target.closest("a, button, .avatar, input, textarea");
   cursor.classList.toggle("big", !!interactive);
 });
 
 const avatar = document.getElementById("avatar");
-const wrap = avatar.parentElement;
+const avatarImg = document.getElementById("avatarImg");
+const avatarFallback = document.getElementById("avatarFallback");
+const pendulum = document.getElementById("avatarPendulum");
+const wrap = avatar.parentElement.parentElement;
+
+if (avatarImg && avatarFallback) {
+  const showFallback = () => {
+    avatarImg.style.display = "none";
+    avatarFallback.style.display = "flex";
+  };
+  avatarImg.addEventListener("error", showFallback);
+  if (avatarImg.complete && avatarImg.naturalWidth === 0) showFallback();
+}
 
 wrap.addEventListener("mousemove", e => {
   const r = avatar.getBoundingClientRect();
   const x = (e.clientX - r.left) / r.width - 0.5;
   const y = (e.clientY - r.top) / r.height - 0.5;
+
   avatar.style.transform = `rotateX(${-y * 20}deg) rotateY(${x * 20}deg) scale(1.02)`;
+
+  const swing = x * 8;
+  pendulum.style.transform = `rotate(${swing}deg)`;
+  pendulum.style.animation = "none";
 });
+
 wrap.addEventListener("mouseleave", () => {
   avatar.style.transform = "rotateX(0) rotateY(0) scale(1)";
+  pendulum.style.transform = "";
+  pendulum.style.animation = "";
 });
 
 function boing() {
@@ -214,7 +234,12 @@ function boing() {
   void avatar.offsetWidth;
   avatar.classList.add("boing");
   popSound();
-  setTimeout(() => avatar.classList.remove("boing"), 650);
+
+  pendulum.style.animation = "boingPendulum 0.9s cubic-bezier(0.34, 1.56, 0.64, 1)";
+  setTimeout(() => {
+    avatar.classList.remove("boing");
+    pendulum.style.animation = "";
+  }, 950);
 }
 avatar.addEventListener("click", boing);
 avatar.addEventListener("touchstart", boing, { passive: true });
@@ -224,7 +249,7 @@ document.querySelectorAll(".socials a, .audio-btn, .top-btn, .share-btn").forEac
     const r = el.getBoundingClientRect();
     const x = e.clientX - r.left - r.width / 2;
     const y = e.clientY - r.top - r.height / 2;
-    el.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px) scale(1.06)`;
+    el.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px) scale(1.08)`;
   });
   el.addEventListener("mouseleave", () => {
     el.style.transform = "";
@@ -245,17 +270,17 @@ let typed = false;
 function startTyping() {
   if (typed) return;
   typed = true;
-  const el = document.getElementById("bioFirst");
-  const second = document.getElementById("bioSecond");
+  const el = document.getElementById("bioText");
   let i = 0;
   function type() {
-    if (i <= BIO_FIRST.length) {
-      el.innerHTML = BIO_FIRST.slice(0, i) + '<span class="caret">▍</span>';
+    if (i <= BIO_FULL.length) {
+      el.innerHTML = BIO_FULL.slice(0, i) + '<span class="caret">▍</span>';
       i++;
-      setTimeout(type, 35);
+      const ch = BIO_FULL[i - 1];
+      const delay = (ch === "," || ch === "." || ch === "!" || ch === "—") ? 120 : 35;
+      setTimeout(type, delay);
     } else {
-      el.innerHTML = BIO_FIRST;
-      setTimeout(() => second.classList.add("show"), 300);
+      el.innerHTML = BIO_FULL;
     }
   }
   type();
@@ -298,3 +323,18 @@ shareBtn.addEventListener("click", async () => {
     }
   }
 });
+
+const writeForm = document.getElementById("writeForm");
+if (writeForm) {
+  writeForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const name = document.getElementById("writeName").value.trim();
+    const msg = document.getElementById("writeMsg").value.trim();
+    if (!name || !msg) return;
+    const text = `Привет! Меня зовут ${name}.\n\n${msg}`;
+    const url = `https://t.me/MsKennya?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank");
+    toast("Открываю Telegram ✨");
+    writeForm.reset();
+  });
+      }
