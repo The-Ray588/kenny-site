@@ -232,20 +232,6 @@ kenny-site/
 ├── 🖼️ avatar.jpg        # фото для бейджа
 └── 🎵 track.m4a         # фоновый трек
 
-<div align="center">
-
-🚀 Запуск
-
-</div>
-
-Просто откройте index.html в браузере.
-Или через локальный сервер:
-
-```bash
-python -m http.server 8000
-# → http://localhost:8000
-```
-
 ---
 <div align="center">
 
