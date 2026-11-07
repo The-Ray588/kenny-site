@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=200&section=header&text=Екатерина&fontSize=70&fontColor=f472b6&animation=fadeIn&fontAlignY=40&desc=актриса%20·%20блогер%20·%20музыкант&descAlignY=60&descSize=18&descColor=a855f7" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=220&section=header&text=Екатерина&fontSize=80&fontWeight=800&fontColor=f472b6&animation=fadeIn&fontAlignY=40&desc=актриса%20·%20блогер%20·%20музыкант&descAlignY=62&descSize=20&descWeight=700&descColor=a855f7" width="100%"/>
 
 <br/>
 
@@ -26,7 +26,7 @@
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Unbounded&weight=600&size=22&duration=3000&pause=1000&color=F472B6&center=true&vCenter=true&width=600&lines=Добро+пожаловать+на+мой+сайт+✨;Актёрское+мастерство+🎭;Блогинг+📱;Музыка+🎵;Психология+🧠" />
+<img src="https://readme-typing-svg.demolab.com?font=Unbounded&weight=800&size=26&duration=3000&pause=1000&color=F472B6&center=true&vCenter=true&width=600&lines=Добро+пожаловать+на+мой+сайт+✨;Актёрское+мастерство+🎭;Блогинг+📱;Музыка+🎵;Психология+🧠" />
 
 </div>
 
@@ -401,7 +401,7 @@ https://the-ray588.github.io/kenny-site/
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=140&section=footer&text=©%202026%20·%20Сделано%20с%20❤️&fontSize=20&fontColor=f472b6&animation=fadeIn"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=140&section=footer&text=©%202026%20·%20Сделано%20с%20❤️&fontSize=20&fontWeight=800&fontColor=f472b6&animation=fadeIn"/>
 
 ⭐ Если понравился сайт — поставь звезду репозиторию!
 
