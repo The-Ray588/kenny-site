@@ -1,10 +1,11 @@
+```markdown
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=200&section=header&text=Екатерина&fontSize=70&fontColor=f472b6&animation=fadeIn&fontAlignY=40&desc=актриса%20·%20блогер%20·%20музыкант&descAlignY=60&descSize=18&descColor=a855f7" width="100%"/>
 
 <br/>
 
-<a href="https://ВАШ-USERNAME.github.io/ВАШ-РЕПОЗИТОРИЙ/">
+<a href="https://the-ray588.github.io/kenny-site/">
   <img src="https://img.shields.io/badge/🌐_Открыть_сайт-f472b6?style=for-the-badge&labelColor=1a0a24" />
 </a>
 <a href="https://t.me/MsKennya">
@@ -51,14 +52,14 @@
 
 ### 🖼️
 **3D-бейдж**  
-Аватар наклоняется за мышью
+Аватар на ниточке, качается и реагирует на мышь
 
 </td>
 <td align="center" width="33%">
 
 ### 💥
 **Пружинка**  
-Бейдж «дёргается» от клика
+Бейдж «дёргается» от клика со звуком
 
 </td>
 <td align="center" width="33%">
@@ -88,7 +89,7 @@
 
 ### ⌨️
 **Печатающийся текст**  
-Биография по буквам
+Биография по буквам с паузами
 
 </td>
 </tr>
@@ -118,16 +119,16 @@
 <tr>
 <td align="center">
 
-### ⬆️
-**Кнопка «Наверх»**  
-Появляется после скролла
+### 💌
+**Форма «Написать»**  
+Открывает Telegram с текстом
 
 </td>
 <td align="center">
 
-### 🔗
-**Поделиться**  
-Копирует ссылку
+### 🎧
+**Сейчас слушаю**  
+Плашка с текущим треком
 
 </td>
 <td align="center">
@@ -150,7 +151,7 @@
 
 <table align="center">
 <tr>
-<td align="center" width="120px"><b>TheRay</b><br/>💻</td>
+<td align="center" width="140px"><b>TheRay</b><br/>💻</td>
 <td>Программист · Художник · 3D-модельер · <b>Разработчик сайта</b></td>
 </tr>
 <tr>
@@ -224,7 +225,7 @@
 </div>
 
 ```bash
-my-site/
+kenny-site/
 │
 ├── 🎨 index.html        # разметка
 ├── 💅 style.css         # стили и анимации
