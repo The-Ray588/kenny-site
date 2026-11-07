@@ -231,13 +231,45 @@ kenny-site/
 ├── ⚙️ script.js         # логика и интерактив
 ├── 🖼️ avatar.jpg        # фото для бейджа
 └── 🎵 track.m4a         # фоновый трек
+```
 
 ---
+
 <div align="center">
 
-🔗 the-ray588.github.io/kenny-site
+🚀 Запуск
 
 </div>
+
+Просто откройте index.html в браузере.
+Или через локальный сервер:
+
+```bash
+python -m http.server 8000
+# → http://localhost:8000
+```
+
+---
+
+<div align="center">
+
+🌐 Деплой
+
+</div>
+
+Сайт работает на GitHub Pages:
+
+Шаг Действие
+1 Settings → Pages
+2 Source: Deploy from a branch
+3 Branch: main, папка / (root)
+4 Save
+
+Через минуту сайт доступен по адресу:
+
+```
+https://the-ray588.github.io/kenny-site/
+```
 
 ---
 
