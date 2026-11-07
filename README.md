@@ -231,6 +231,7 @@ kenny-site/
 ├── ⚙️ script.js         # логика и интерактив
 ├── 🖼️ avatar.jpg        # фото для бейджа
 └── 🎵 track.m4a         # фоновый трек
+
 <div align="center">
 
 🚀 Запуск
