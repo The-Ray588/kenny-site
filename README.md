@@ -1,4 +1,3 @@
-```markdown
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=200&section=header&text=Екатерина&fontSize=70&fontColor=f472b6&animation=fadeIn&fontAlignY=40&desc=актриса%20·%20блогер%20·%20музыкант&descAlignY=60&descSize=18&descColor=a855f7" width="100%"/>
@@ -232,7 +231,43 @@ kenny-site/
 ├── ⚙️ script.js         # логика и интерактив
 ├── 🖼️ avatar.jpg        # фото для бейджа
 └── 🎵 track.m4a         # фоновый трек
+<div align="center">
+
+🚀 Запуск
+
+</div>
+
+Просто откройте index.html в браузере.
+Или через локальный сервер:
+
+```bash
+python -m http.server 8000
+# → http://localhost:8000
 ```
+
+---
+
+<div align="center">
+
+🌐 Деплой
+
+</div>
+
+Сайт работает на GitHub Pages:
+
+Шаг Действие
+1 Settings → Pages
+2 Source: Deploy from a branch
+3 Branch: main, папка / (root)
+4 Save
+
+Через минуту сайт доступен по адресу:
+
+```
+https://the-ray588.github.io/kenny-site/
+```
+
+---
 
 <div align="center">
 
