@@ -273,14 +273,31 @@ https://the-ray588.github.io/kenny-site/
 
 ---
 
-<div align="center">
-
 🙏 Благодарности
 
-TheRay — разработка сайта, дизайн, 3D-модели
-@kot_dev · @c0ldzx
+💻 Разработка сайта
 
-Вся команда — за поддержку и творчество ❤
+<a href="https://t.me/kot_dev">
+  <img src="https://img.shields.io/badge/TheRay_·_@kot__dev-f472b6?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1a0a24" />
+</a>
+<a href="https://t.me/c0ldzx">
+  <img src="https://img.shields.io/badge/TheRay_·_@c0ldzx-a855f7?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1a0a24" />
+</a>
+
+👥 Вся команда
+
+<a href="https://t.me/MsKennya">
+  <img src="https://img.shields.io/badge/Екатерина-f472b6?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1a0a24" />
+</a>
+<a href="https://the-ray588.github.io/kenny-site/">
+  <img src="https://img.shields.io/badge/Сайт-a855f7?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1a0a24" />
+</a>
+
+
+
+
+
+<sub>Спасибо, что заглянули! ❤</sub>
 
 </div>
 
@@ -306,9 +323,21 @@ TheRay — разработка сайта, дизайн, 3D-модели
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=120&section=footer&text=©%202026%20·%20Сделано%20с%20❤️&fontSize=18&fontColor=f472b6&animation=fadeIn"/>
+<img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%"/>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=140&section=footer&text=©%202026%20·%20Сделано%20с%20❤️&fontSize=20&fontColor=f472b6&animation=fadeIn"/>
 
 ⭐ Если понравился сайт — поставь звезду репозиторию!
+
+<br/>
+
+<sub>Сделано с 💜 командой и TheRay</sub>
 
 </div>
 ```
