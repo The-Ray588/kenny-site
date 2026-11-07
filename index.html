@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Екатерина — актриса, блогер, музыкант</title>
+
+  <meta property="og:title" content="Екатерина — актриса, блогер, музыкант" />
+  <meta property="og:description" content="Мой сайт-визитка и моя команда ✨" />
+  <meta property="og:image" content="https://the-ray588.github.io/kenny-site/avatar.jpg" />
+  <meta property="og:url" content="https://the-ray588.github.io/kenny-site/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="avatar.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -13,6 +22,7 @@
 
 <canvas id="constellation"></canvas>
 <div class="bg-grid"></div>
+<div class="bg-big-eight">8</div>
 <div class="cursor" id="cursor"></div>
 
 <button class="audio-btn" id="audioBtn">🔇</button>
@@ -20,12 +30,21 @@
 <button class="share-btn" id="shareBtn" title="Поделиться">🔗</button>
 
 <div class="clock" id="clock">—:—</div>
+<div class="now-playing" id="nowPlaying">
+  <span class="np-dot"></span>
+  <span class="np-text">Сейчас слушаю: <b>LÖVI — Будет ли у нас всё в порядке?</b></span>
+</div>
+<div class="version">v1.3</div>
 
 <section id="hero">
   <div class="hero">
     <div class="avatar-wrap">
-      <div class="avatar" id="avatar">
-        <img src="avatar.jpg" alt="avatar" />
+      <div class="thread" id="thread"></div>
+      <div class="avatar-pendulum" id="avatarPendulum">
+        <div class="avatar" id="avatar">
+          <img src="avatar.jpg" alt="Екатерина" id="avatarImg" />
+          <div class="avatar-fallback" id="avatarFallback" style="display:none;">Е</div>
+        </div>
       </div>
     </div>
     <div>
@@ -38,10 +57,7 @@
 <section id="about">
   <h2>$ about</h2>
   <div class="bio">
-    <p class="bio-first" id="bioFirst"><span class="caret">▍</span></p>
-    <p class="bio-second" id="bioSecond">
-      Я увлекаюсь актёрским мастерством, ведением блога, музыкой и психологией.
-    </p>
+    <p class="bio-text" id="bioText"><span class="caret">▍</span></p>
   </div>
 </section>
 
@@ -61,6 +77,16 @@
 <section id="contacts">
   <h2>$ contacts</h2>
   <div class="socials" id="socials"></div>
+
+  <div class="write-me">
+    <h3>✉️ Написать мне</h3>
+    <p>Есть вопрос или предложение? Напиши — я отвечу в Telegram.</p>
+    <form class="write-form" id="writeForm">
+      <input type="text" id="writeName" placeholder="Твоё имя" required />
+      <textarea id="writeMsg" placeholder="Твоё сообщение..." rows="4" required></textarea>
+      <button type="submit">Отправить в Telegram →</button>
+    </form>
+  </div>
 </section>
 
 <footer>© 2026 · сделано с ♥</footer>
